@@ -6,22 +6,34 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
     <strong>Ready to create an app?</strong>
-    <ion-button expand="full" (click)="takePhoto()">
-      Tomar foto
-    </ion-button>
-
-    <ion-button expand="full" (click)="logCurrentNetworkStatus()">
-      Network
-    </ion-button>
+      
+      <ion-content [fullscreen]="true">
+      <ion-header collapse="condense">
+      <ion-toolbar>
+      <ion-title size="large">Ubicación</ion-title>
+      </ion-toolbar>
+      </ion-header>
+      
+      <div id="container" style="text-align: center; margin-top: 40px;">
+      <strong>Presiona un botón</strong>
+      <ion-button expand="full" (click)="takePhoto()">
+        Tomar foto
+      </ion-button>
+      <ion-button expand="full" (click)="getCurrentPosition()">
+      Ubicación
+      </ion-button>
+      <ion-button expand="full" color="secondary" (click)="checkNetworkStatus()">
+      Estado de Red
+      </ion-button>
+      <ion-button expand="full" color="tertiary" (click)="saveFile()">
+      Guardar Archivo
+      </ion-button>
+      <ion-button expand="full" color="warning" (click)="readFile()">
+      Leer Archivo
+      </ion-button>
+    
 
 
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
